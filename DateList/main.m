@@ -16,9 +16,7 @@ int main(int argc, const char * argv[]) {
         
         NSArray *dateList = @[now, tomorrow, yesterday];
         
-        NSUInteger dateCount = [dateList count];
-        for (int i = 0; i < dateCount; i++) {
-            NSDate *d = dateList[i];
+        for (NSDate *d in dateList) {
             NSLog(@"Here is a date: %@", d);
         }
     }
