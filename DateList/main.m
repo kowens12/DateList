@@ -15,6 +15,11 @@ int main(int argc, const char * argv[]) {
         NSDate *yesterday = [now dateByAddingTimeInterval:-24.0 * 60.0 * 60.0];
         
         NSArray *dateList = @[now, tomorrow, yesterday];
+        
+        NSLog(@"The first date is %@", dateList[0]);
+        NSLog(@"The second date is %@", dateList[1]);
+        
+        NSLog(@"There are %lu dates", [dateList count]);
     }
     return 0;
 }
