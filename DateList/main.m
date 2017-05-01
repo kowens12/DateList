@@ -16,10 +16,11 @@ int main(int argc, const char * argv[]) {
         
         NSArray *dateList = @[now, tomorrow, yesterday];
         
-        NSLog(@"The first date is %@", dateList[0]);
-        NSLog(@"The second date is %@", dateList[1]);
-        
-        NSLog(@"There are %lu dates", [dateList count]);
+        NSUInteger dateCount = [dateList count];
+        for (int i = 0; i < dateCount; i++) {
+            NSDate *d = dateList[i];
+            NSLog(@"Here is a date: %@", d);
+        }
     }
     return 0;
 }
